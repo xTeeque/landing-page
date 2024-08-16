@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:2.1
+N:Gump;אסף
+FN:אסף - שירותי מחשוב
+TITLE:טכנאי מחשבים
+PHOTO;GIF:http://www.example.com/dir_photos/my_photo.gif
+TEL;WORK;VOICE:+972533395180
+ADR;פתח תקווה
+EMAIL:asafrepairs@gmail.com
+REV:20080424T195243Z
+END:VCARD
