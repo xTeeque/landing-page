@@ -93,13 +93,14 @@
 
   <section id="contact" class="contact fade-in">
     <h2>צור קשר - נשמח לשוחח!</h2>
-    <form>
-      <input type="text" placeholder="שם מלא" required>
-      <input type="email" placeholder="אימייל" required>
-      <textarea placeholder="הודעה" required></textarea>
+    <form action="https://formspree.io/f/xdkndrlr" method="POST">
+      <input type="text" name="name" placeholder="שם מלא" required>
+      <input type="email" name="email" placeholder="אימייל" required>
+      <textarea name="message" placeholder="הודעה" required></textarea>
       <button type="submit" class="submit-button">שלח הודעה</button>
     </form>
-  </section>
+</section>
+
 
   <footer>
     <div class="footer-content">
