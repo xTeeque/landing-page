@@ -18,9 +18,15 @@ header {
     background: #009688;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* Stack title and nav links vertically */
+    align-items: center; /* Center all content horizontally */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    margin-bottom: 10px; /* Add space between the title and the nav links */
+    width: 100%; /* Make the logo container take full width */
+    text-align: center; /* Center the title text inside the logo container */
 }
 
 .logo a {
@@ -38,6 +44,11 @@ header {
 .nav-links {
     list-style: none;
     display: flex;
+    justify-content: center; /* Center the nav-links horizontally */
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    flex-direction: row; /* Keep nav-links in a horizontal row */
 }
 
 .nav-links li {
@@ -58,6 +69,7 @@ header {
     transform: scale(1.1);
 }
 
+
 /* Hero Section */
 .hero {
     background: #009688;
@@ -66,7 +78,7 @@ header {
     text-align: center;
     position: relative;
     overflow: hidden;
-    background-image: url('pc-5737958_1280.jpg'); /* Add your background image here */
+    background-image: url('background-image.jpg'); /* Add your background image here */
     background-size: cover;
     background-position: center;
 }
@@ -324,11 +336,21 @@ header {
 
 /* Footer */
 footer {
-    background: #004d40;
-    padding: 20px;
-    text-align: center;
+    background-color: #004d40;
     color: #ffffff;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 .scroll-to-top {
@@ -357,71 +379,67 @@ footer {
 }
 
 /* Animations */
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeIn {
-    0% {
+@keyframes fadeInUp {
+    from {
         opacity: 0;
+        transform: translateY(50px);
     }
-    100% {
+    to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
 @keyframes slideIn {
-    0% {
-        transform: translateY(-50px);
-        opacity: 0;
+    from {
+        transform: translateX(-100%);
     }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
+    to {
+        transform: translateX(0);
     }
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1s ease forwards;
-}
-
-.visible {
-    opacity: 1;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
-    /* Mobile and tablet styles */
     header {
-        padding: 10px;
+        flex-direction: column; /* Stack logo and nav links vertically */
     }
+
+    .nav-links {
+        justify-content: center; /* Center the nav-links horizontally */
+    }
+
     .hero {
         padding: 100px 0;
     }
-    /* ... other adjustments for smaller screens ... */
+
+    .service-cards {
+        flex-direction: column; /* Stack service cards vertically */
+    }
+
+    .card {
+        width: 100%; /* Make each card take full width */
+        margin-bottom: 20px; /* Add spacing between cards */
+    }
 }
 
 @media (max-width: 480px) {
-    /* Mobile-only styles */
-    /* ... specific styles for small screens ... */
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1rem; /* Adjust button size for small screens */
+    }
+
+    .submit-button {
+        padding: 10px 20px;
+        font-size: 1rem; /* Adjust submit button size */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center the stacked links */
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Add margin for spacing */
+    }
 }
