@@ -1,13 +1,16 @@
 /* General Styles */
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif; /* Add fallback fonts */
     background-color: #f0f0f0;
     color: #333;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     direction: rtl;
-    scroll-behavior: smooth; /* Smooth scrolling for internal links */
 }
 
 /* Header and Navigation */
@@ -17,11 +20,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-html {
-    scroll-behavior: smooth; /* Enables smooth scrolling */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .logo a {
@@ -110,7 +109,7 @@ html {
 .cta-button:hover {
     background: #e64a19;
     transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Services Section */
@@ -118,7 +117,7 @@ html {
     padding: 50px;
     background-color: #ffffff;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .services h2 {
@@ -143,7 +142,7 @@ html {
     width: 30%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     opacity: 0;
     transform: translateY(50px);
     animation: fadeInUp 1s ease forwards;
@@ -184,7 +183,7 @@ html {
 
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* About Section */
@@ -192,7 +191,7 @@ html {
     padding: 50px;
     background-color: #e0f2f1;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .about img {
@@ -211,7 +210,7 @@ html {
     padding: 20px;
     background-color: #ffffff;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .my-details h2 {
@@ -235,7 +234,7 @@ html {
     padding: 50px;
     background-color: #ffffff;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .contact form {
@@ -277,7 +276,7 @@ html {
 .submit-button:hover {
     background: #00796b;
     transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* New Contact and Social Media Section */
@@ -329,7 +328,7 @@ footer {
     padding: 20px;
     text-align: center;
     color: #ffffff;
-    box-shadow: 0 -4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .scroll-to-top {
@@ -410,14 +409,19 @@ footer {
     opacity: 1;
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
-    .service-cards {
-        flex-direction: column;
-        align-items: center;
+    /* Mobile and tablet styles */
+    header {
+        padding: 10px;
     }
+    .hero {
+        padding: 100px 0;
+    }
+    /* ... other adjustments for smaller screens ... */
+}
 
-    .card {
-        width: 80%;
-        margin-bottom: 20px;
-    }
+@media (max-width: 480px) {
+    /* Mobile-only styles */
+    /* ... specific styles for small screens ... */
 }
