@@ -4,29 +4,26 @@ html {
 }
 
 body {
-    font-family: 'Assistant', sans-serif; /* Updated to 'Assistant' font */
+    font-family: 'Assistant', sans-serif; /* Use preferred font */
     background-color: #f0f0f0;
     color: #333;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     direction: rtl;
+    font-size: 16px; /* Base font size */
 }
 
 /* Header and Navigation */
 header {
     background: #009688;
     padding: 20px;
-    display: flex;
-    flex-direction: column; /* Stack title and nav links vertically */
-    align-items: center; /* Center all content horizontally */
+    text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
-    margin-bottom: 10px; /* Space between title and nav links */
-    width: 100%; /* Full width logo container */
-    text-align: center; /* Center title text */
+    margin-bottom: 10px; /* Add space between the title and the nav links */
 }
 
 .logo a {
@@ -43,12 +40,10 @@ header {
 
 .nav-links {
     list-style: none;
-    display: flex;
-    justify-content: center; /* Center nav-links horizontally */
-    align-items: center;
     padding: 0;
     margin: 0;
-    flex-direction: row; /* Horizontal nav-links */
+    display: flex;
+    justify-content: center; /* Center the nav-links horizontally */
 }
 
 .nav-links li {
@@ -73,13 +68,12 @@ header {
 .hero {
     background: #009688;
     color: #ffffff;
-    padding: 200px 0;
+    padding: 200px 20px;
     text-align: center;
     position: relative;
-    overflow: hidden;
-    background-image: url('background-image.jpg'); /* Background image */
     background-size: cover;
     background-position: center;
+    background-image: url('background-image.jpg'); /* Add your background image here */
 }
 
 .hero-content {
@@ -94,7 +88,7 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('background-image.jpg'); /* Background image */
+    background-image: url('background-image.jpg'); /* Add your background image here */
     background-size: cover;
     background-position: center;
     opacity: 0;
@@ -172,7 +166,7 @@ header {
 }
 
 .card img {
-    width: 30%;
+    width: 100%; /* Full width images */
     border-radius: 10px;
     margin-bottom: 15px;
     transition: transform 0.3s ease;
@@ -339,52 +333,104 @@ footer {
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 40px;
 }
 
-.footer-content p {
-    margin: 0;
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
 }
 
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Scroll to Top Button */
 .scroll-to-top {
-    display: inline-block;
-    margin-top: 10px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #009688;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1.2rem;
     cursor: pointer;
+    display: none; /* Hidden by default */
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.scroll-to-top img {
-    width: 40px;
-    height: 40px;
+.scroll-to-top:hover {
+    background: #00796b;
+    transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .hero {
+        padding: 100px 20px;
+        background-position: top center;
+    }
+
+    .services {
+        padding: 20px;
+    }
+
+    .service-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .about img, .my-details img {
+        max-width: 100%;
+    }
+
+    .contact form {
+        width: 100%;
+    }
+
+    .submit-button {
+        padding: 10px 20px;
+    }
+
+    .social-media-icons img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero {
+        padding: 150px 40px;
+    }
+
+    .service-cards {
+        flex-direction: row;
+    }
+
+    .card {
+        width: 45%;
+        margin: 10px;
+    }
 }
 
 /* Animations */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
