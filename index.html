@@ -22,7 +22,9 @@
     </ul>
 </header>
 
-<section class="hero">
+
+
+  <section class="hero">
     <div class="hero-content fade-in">
       <h1>TechFix - שירותי מחשבים עם צבע!</h1>
       <p>החבר הכי טוב של המחשב שלך נמצא במרחק קליק!</p>
@@ -30,9 +32,9 @@
     </div>
     <div class="hero-bg-image fade-in">
       </div>
-</section>
+  </section>
 
-<section id="services" class="services fade-in">
+  <section id="services" class="services fade-in">
     <h2>השירותים שלנו</h2>
     <div class="service-cards">
       <div class="card">
@@ -56,15 +58,15 @@
         <p>שחזור נתונים בצורה מקצועית!</p>
       </div>
     </div>
-</section>
+  </section>
 
-<section id="about" class="about fade-in">
+  <section id="about" class="about fade-in">
     <img src="images/team.png" alt="צוות טכנאים מקצועי">
     <h2>אודותינו - מקצועיות עם גישה</h2>
     <p>אנחנו לא רק טכנאים, אנחנו טכנאים מקצועיים עם גישה ייחודית לכל בעיה טכנולוגית.</p>
-</section>
+  </section>
 
-<section id="my-details" class="my-details fade-in">
+  <section id="my-details" class="my-details fade-in">
     <h2>הפרטים שלי</h2>
     <div class="contact-section">
       <h1>שמרו אותי באנשי הקשר</h1>
@@ -87,33 +89,56 @@
         </a>
       </div>
     </div>
+  </section>
+
+<section id="contact" class="contact fade-in">
+    <h2>צור קשר - נשמח לשוחח!</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="שם מלא" required>
+      <input type="email" name="email" placeholder="אימייל" required>
+      <textarea name="message" placeholder="הודעה" required></textarea>
+      <button type="submit" class="submit-button">שלח הודעה</button>
+    </form>
+    <div id="form-status"></div>
 </section>
 
-<form id="contactForm" action="https://formspree.io/f/xdkndrlr" method="POST">
-    <!-- Your form fields -->
-    <input type="text" name="phone" placeholder="Enter your phone number" required>
-    <button type="submit" class="submit-button">Submit</button>
-</form>
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevents default form submission behavior
+    var form = event.target;
+    var formData = new FormData(form);
 
-<div id="popup" class="popup">
-    <div class="popup-content">
-        <span class="close-btn">&times;</span>
-        <h2>Success!</h2>
-        <p>Your form has been submitted successfully.</p>
-    </div>
-</div>
+    fetch('https://formspree.io/f/xdkndrlr', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(function(response) {
+        if (response.ok) {
+            document.getElementById('form-status').innerHTML = 'Your message has been sent successfully!';
+            form.reset(); // Clear the form
+        } else {
+            document.getElementById('form-status').innerHTML = 'Oops! There was a problem sending your message.';
+        }
+    }).catch(function(error) {
+        document.getElementById('form-status').innerHTML = 'Oops! There was a problem sending your message.';
+    });
+});
+</script>
 
 
-<footer>
+
+  <footer>
     <div class="footer-content">
       <p>&copy; 2024 אסף. כל הזכויות שמורות.</p>
       <a href="#" id="scrollToTopBtn" class="scroll-to-top">
         <img src="images/scroll-to-top.png" alt="חזור למעלה">
       </a>
     </div>
-</footer>
+  </footer>
 
-<script>
+  <script>
     window.onscroll = function() {
       var scrollTopButton = document.getElementById("scrollToTopBtn");
       if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -126,6 +151,6 @@
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-</script>
+  </script>
 </body>
 </html>
