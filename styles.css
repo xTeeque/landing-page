@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    font-family: 'Assistant', Arial, sans-serif; /* Updated to 'Assistant' */
+    font-family: Arial, sans-serif; /* Add fallback fonts */
     background-color: #f0f0f0;
     color: #333;
     margin: 0;
@@ -215,8 +215,7 @@ header {
 .about img:hover {
     transform: scale(1.05);
 }
-
-/* My-Details Section */
+/* my-details Section */
 .my-details {
     padding: 20px;
     background-color: #ffffff;
@@ -238,6 +237,99 @@ header {
     color: #009688;
     font-weight: bold;
     animation: slideIn 1s ease-out;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact input,
+.contact textarea {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #009688;
+    background-color: #e0f2f1;
+    color: #333;
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 150, 136, 0.5);
+}
+
+.submit-button {
+    background: #009688;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #00796b;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* New Contact and Social Media Section */
+.contact-section {
+    text-align: center;
+    margin: 20px;
+    background-color: transparent; /* No background color */
+}
+
+.save-contact-btn {
+    background-color: #4CAF50; /* Button background */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.save-contact-btn:hover {
+    background-color: #45a049;
+}
+
+.social-media-icons {
+    margin-top: 20px;
+    background-color: transparent; /* No background color */
+}
+
+.social-media-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-media-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    background-color: transparent; /* No background color */
+}
+
+.social-media-icons img:hover {
+    transform: scale(1.1); /* Hover effect */
 }
 
 /* Contact Section */
@@ -289,166 +381,101 @@ header {
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* New Contact and Social Media Section */
-.contact-section {
-    text-align: center;
-    margin: 20px;
-    background-color: transparent; /* No background color */
-}
-
-.save-contact-btn {
-    background-color: #4CAF50; /* Button background */
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-}
-
-.save-contact-btn:hover {
-    background-color: #45a049;
-}
-
-.social-media-icons {
-    margin-top: 20px;
-    background-color: transparent; /* No background color */
-}
-
-.social-media-icons a {
-    margin: 0 10px;
-    display: inline-block;
-}
-
-.social-media-icons img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-    background-color: transparent; /* No background color */
-}
-
-.social-media-icons img:hover {
-    transform: scale(1.1); /* Hover effect */
-}
-
 /* Footer */
 footer {
     background: #00796b;
     padding: 20px;
-    color: #ffffff;
     text-align: center;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-links li {
-    display: inline;
-    margin-right: 15px;
-}
-
-.footer-links a {
     color: #ffffff;
-    text-decoration: none;
-    font-size: 1rem;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.2);
 }
 
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-/* Reviews Section */
-.reviews {
-    padding: 50px;
-    background-color: #e0f2f1;
-    text-align: center;
-}
-
-.review-container {
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 75px;
+    height: 75px;
     display: flex;
-    overflow: hidden;
-    position: relative;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fffff;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.review-slide {
-    min-width: 100%;
-    box-sizing: border-box;
-    transition: transform 0.5s ease-in-out;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.scroll-to-top img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
-.review-slide p {
-    font-size: 1.2rem;
-    margin: 0;
-    color: #333;
-}
-
-.review-slide h3 {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    color: #009688;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .services .card,
-    .review-slide {
-        width: 80%;
-    }
-
-    .hero-content {
-        padding: 50px 20px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .card img {
-        width: 50%;
-    }
+.scroll-to-top:hover {
+    transform: scale(1.2);
+    background: #fffff;
 }
 
 /* Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 @keyframes fadeIn {
-    from {
+    0% {
         opacity: 0;
     }
-    to {
+    100% {
         opacity: 1;
     }
 }
 
 @keyframes slideIn {
-    from {
+    0% {
         transform: translateY(-50px);
         opacity: 0;
     }
-    to {
+    100% {
         transform: translateY(0);
         opacity: 1;
     }
 }
 
 @keyframes fadeInUp {
-    from {
+    0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(50px);
     }
-    to {
+    100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+.visible {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
     }
 }
