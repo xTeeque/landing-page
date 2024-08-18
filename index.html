@@ -89,55 +89,20 @@
     </div>
 </section>
 
-<section id="contact" class="contact fade-in">
-    <h2>צור קשר - נשמח לשוחח!</h2>
-    <form id="contact-form">
-      <input type="text" name="name" placeholder="שם מלא" required>
-      <input type="text" name="phone" placeholder="מספר טלפון" required>
-      <textarea name="message" placeholder="הודעה" required></textarea>
-      <button type="submit" class="submit-button">שלח הודעה</button>
-    </form>
+<form id="contactForm" action="https://formspree.io/f/xdkndrlr" method="POST">
+    <!-- Your form fields -->
+    <input type="text" name="phone" placeholder="Enter your phone number" required>
+    <button type="submit" class="submit-button">Submit</button>
+</form>
 
-    <!-- Popup message -->
-    <div id="popup-message" style="display:none;">
-      <p id="popup-text"></p>
-      <button onclick="closePopup()">סגור</button>
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2>Success!</h2>
+        <p>Your form has been submitted successfully.</p>
     </div>
-</section>
+</div>
 
-<script>
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevents default form submission behavior
-    var form = event.target;
-    var formData = new FormData(form);
-
-    fetch('https://formspree.io/f/xdkndrlr', {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'Accept': 'application/json'
-        }
-    }).then(function(response) {
-        if (response.ok) {
-            showPopup('ההודעה שלך נשלחה בהצלחה!');
-            form.reset(); // Clear the form
-        } else {
-            showPopup('אופס! הייתה בעיה בשליחת ההודעה שלך.');
-        }
-    }).catch(function(error) {
-        showPopup('אופס! הייתה בעיה בשליחת ההודעה שלך.');
-    });
-});
-
-function showPopup(message) {
-    document.getElementById('popup-text').innerText = message;
-    document.getElementById('popup-message').style.display = 'block';
-}
-
-function closePopup() {
-    document.getElementById('popup-message').style.display = 'none';
-}
-</script>
 
 <footer>
     <div class="footer-content">
