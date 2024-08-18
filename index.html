@@ -6,7 +6,6 @@
     <meta name="description" content="שירותי מחשבים מקצועיים ומהירים עם גישה ייחודית ואמינה.">
     <title>TechFix - שירותי מחשבים מקצועיים</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -16,7 +15,6 @@
             <ul class="nav-links">
                 <li><a href="#services">שירותים</a></li>
                 <li><a href="#about">אודות</a></li>
-                <li><a href="#reviews">חוות דעת</a></li>
                 <li><a href="#my-details">צור קשר</a></li>
             </ul>
         </nav>
@@ -28,43 +26,80 @@
             <p>החבר הכי טוב של המחשב שלך נמצא במרחק קליק!</p>
             <a href="#contact" class="cta-button">ליצירת קשר</a>
         </div>
-        <div class="hero-bg-image fade-in"></div>
-    </section>
-
-    <!-- Your other sections go here -->
-
-    <section id="reviews" class="reviews fade-in">
-        <div class="container">
-            <div class="board">
-                <h2 class="text-light">חוות דעת מלקוחותינו</h2>
-                <p class="text-light">כמה מהמלצות הלקוחות שלנו</p>
-
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="flex">
-                                <div class="comments">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Non, placeat quisquam? Animi sunt, dignissimos est sit reiciendis iste ipsa error?
-                                </div>
-                                <div class="profile">
-                                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60" alt="">
-                                    <a href="#">John V. Bellanmy</a>
-                                    <span>Founder & CEO</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Add more swiper-slide items as needed -->
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-            </div>
+        <div class="hero-bg-image fade-in">
+            <!-- Background image will reveal as you scroll -->
         </div>
     </section>
 
-    <!-- Your remaining sections go here -->
+    <section id="services" class="services fade-in">
+        <h2>השירותים שלנו</h2>
+        <div class="service-cards">
+            <div class="card">
+                <img src="C:\Users\asafa\Documents\webpage\Images\repair.png" alt="PC Repair">
+                <h3>תיקון מחשבים</h3>
+                <p>אנחנו מחזירים את החיוך למחשב שלך!</p>
+            </div>
+            <div class="card">
+                <img src="C:\Users\asafa\Documents\webpage\Images\repair.png" alt="Network Setup">
+                <h3>התקנת רשתות</h3>
+                <p>רישות מהיר וקל!</p>
+            </div>
+            <div class="card">
+                <img src="C:\Users\asafa\Documents\webpage\Images\repair.png" alt="Data Recovery">
+                <h3>שחזור נתונים</h3>
+                <p>שחזור נתונים בצורה מקצועית!</p>
+            </div>
+			<div class="card">
+                <img src="C:\Users\asafa\Documents\webpage\Images\repair.png" alt="PC Repair">
+                <h3>תיקון מחשבים</h3>
+                <p>אנחנו מחזירים את החיוך למחשב שלך!</p>
+            </div><div class="card">
+                <img src="C:\Users\asafa\Documents\webpage\Images\repair.png" alt="PC Repair">
+                <h3>תיקון מחשבים</h3>
+                <p>אנחנו מחזירים את החיוך למחשב שלך!</p>
+            </div><div class="card">
+                <img src="C:\Users\asafa\Documents\webpage\Images\repair.png" alt="PC Repair">
+                <h3>תיקון מחשבים</h3>
+                <p>אנחנו מחזירים את החיוך למחשב שלך!</p>
+            </div>
+			
+        </div>
+    </section>
+
+    <section id="about" class="about fade-in">
+        <img src="C:\Users\asafa\Documents\webpage\Images\repair.png" alt="Tech Team">
+        <h2>אודותינו - מקצועיות עם גישה</h2>
+        <p>אנחנו לא רק טכנאים, אנחנו טכנאים מקצועיים עם גישה ייחודית לכל בעיה טכנולוגית.</p>
+    </section>
+	
+  <section id="my-details" class="my-details fade-in">
+    <h2>הפרטים שלי</h2>
+    <div class="contact-section">
+      <h1>שמרו אותי באנשי הקשר</h1>
+      <a href="contact.vcf" download="אסף - שירותי מחשוב">
+        <button class="save-contact-btn">לחצו כאן</button>
+      </a>
+      <h1>עקבו אחריי</h1>
+      <div class="social-media-icons">
+        <a href="https://www.facebook.com/asafarusi1?mibextid=LQQJ4d" target="_blank">
+          <img src="fb.png" alt="Facebook">
+        </a>
+        <a href="https://wa.me/972533395180" target="_blank">
+          <img src="ws.png" alt="Whatsapp">
+        </a>
+      </div>
+    </div>
+  </section>
+	
+    <section id="contact" class="contact fade-in">
+    <h2>צור קשר - נשמח לשוחח!</h2>
+    <form id="contact-form" action="https://formspree.io/f/xdkndrlr" method="POST">
+        <input type="text" name="name" placeholder="שמך" required>
+        <input type="email" name="email" placeholder="אימייל שלך" required>
+        <textarea name="message" placeholder="הודעה שלך" required></textarea>
+        <button type="submit" class="submit-button">שלח הודעה</button>
+    </form>
+</section>
 
     <footer>
         <div class="footer-content">
@@ -74,44 +109,30 @@
             </a>
         </div>
     </footer>
-
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
-            const form = event.target;
-            
-            fetch(form.action, {
-                method: 'POST',
-                body: new FormData(form),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    alert('תודה שפנית אלינו!'); // Popup message
-                    form.reset(); // Clear the form
-                } else {
-                    alert('אירעה שגיאה, נסה שוב מאוחר יותר.');
-                }
-            }).catch(error => {
+	
+	<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        const form = event.target;
+        
+        fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                alert('תודה שפנית אלינו!'); // Popup message
+                form.reset(); // Clear the form
+            } else {
                 alert('אירעה שגיאה, נסה שוב מאוחר יותר.');
-            });
+            }
+        }).catch(error => {
+            alert('אירעה שגיאה, נסה שוב מאוחר יותר.');
         });
+    });
+</script>
 
-        // Initialize Swiper
-        const swiper = new Swiper('.swiper', {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-    </script>
 </body>
 </html>
