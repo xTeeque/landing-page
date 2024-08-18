@@ -1,13 +1,16 @@
 /* General Styles */
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif; /* Add fallback fonts */
     background-color: #f0f0f0;
     color: #333;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     direction: rtl;
-    scroll-behavior: smooth; /* Smooth scrolling for internal links */
 }
 
 /* Header and Navigation */
@@ -15,13 +18,15 @@ header {
     background: #009688;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    flex-direction: column; /* Stack title and nav links vertically */
+    align-items: center; /* Center all content horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-html {
-    scroll-behavior: smooth; /* Enables smooth scrolling */
+.logo {
+    margin-bottom: 10px; /* Add space between the title and the nav links */
+    width: 100%; /* Make the logo container take full width */
+    text-align: center; /* Center the title text inside the logo container */
 }
 
 .logo a {
@@ -39,6 +44,11 @@ html {
 .nav-links {
     list-style: none;
     display: flex;
+    justify-content: center; /* Center the nav-links horizontally */
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    flex-direction: row; /* Keep nav-links in a horizontal row */
 }
 
 .nav-links li {
