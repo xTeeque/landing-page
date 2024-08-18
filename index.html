@@ -92,14 +92,14 @@
   </section>
 	
     <section id="contact" class="contact fade-in">
-        <h2>צור קשר - נשמח לשוחח!</h2>
-        <form>
-            <input type="text" placeholder="שמך" required>
-            <input type="email" placeholder="אימייל שלך" required>
-            <textarea placeholder="הודעה שלך" required></textarea>
-            <button type="submit" class="submit-button">שלח הודעה</button>
-        </form>
-    </section>
+    <h2>צור קשר - נשמח לשוחח!</h2>
+    <form id="contact-form" action="https://formspree.io/f/xdkndrlr" method="POST">
+        <input type="text" name="name" placeholder="שמך" required>
+        <input type="email" name="email" placeholder="אימייל שלך" required>
+        <textarea name="message" placeholder="הודעה שלך" required></textarea>
+        <button type="submit" class="submit-button">שלח הודעה</button>
+    </form>
+</section>
 
     <footer>
         <div class="footer-content">
@@ -109,5 +109,30 @@
             </a>
         </div>
     </footer>
+	
+	<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        const form = event.target;
+        
+        fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                alert('תודה שפנית אלינו!'); // Popup message
+                form.reset(); // Clear the form
+            } else {
+                alert('אירעה שגיאה, נסה שוב מאוחר יותר.');
+            }
+        }).catch(error => {
+            alert('אירעה שגיאה, נסה שוב מאוחר יותר.');
+        });
+    });
+</script>
+
 </body>
 </html>
