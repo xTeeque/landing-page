@@ -1,16 +1,13 @@
 /* General Styles */
-html {
-    scroll-behavior: smooth; /* Enables smooth scrolling */
-}
-
 body {
-    font-family: Arial, sans-serif; /* Add fallback fonts */
+    font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
     color: #333;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     direction: rtl;
+    scroll-behavior: smooth; /* Smooth scrolling for internal links */
 }
 
 /* Header and Navigation */
@@ -18,15 +15,13 @@ header {
     background: #009688;
     padding: 20px;
     display: flex;
-    flex-direction: column; /* Stack title and nav links vertically */
-    align-items: center; /* Center all content horizontally */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.logo {
-    margin-bottom: 10px; /* Add space between the title and the nav links */
-    width: 100%; /* Make the logo container take full width */
-    text-align: center; /* Center the title text inside the logo container */
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
 }
 
 .logo a {
@@ -44,11 +39,6 @@ header {
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: center; /* Center the nav-links horizontally */
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    flex-direction: row; /* Keep nav-links in a horizontal row */
 }
 
 .nav-links li {
@@ -69,7 +59,6 @@ header {
     transform: scale(1.1);
 }
 
-
 /* Hero Section */
 .hero {
     background: #009688;
@@ -78,7 +67,7 @@ header {
     text-align: center;
     position: relative;
     overflow: hidden;
-    background-image: url('background-image.jpg'); /* Add your background image here */
+    background-image: url('https://c1.wallpaperflare.com/preview/986/794/372/hardware-computer-computer-service-technology.jpg'); /* Add your background image here */
     background-size: cover;
     background-position: center;
 }
@@ -121,7 +110,7 @@ header {
 .cta-button:hover {
     background: #e64a19;
     transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 /* Services Section */
@@ -129,7 +118,7 @@ header {
     padding: 50px;
     background-color: #ffffff;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .services h2 {
@@ -154,7 +143,7 @@ header {
     width: 30%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     opacity: 0;
     transform: translateY(50px);
     animation: fadeInUp 1s ease forwards;
@@ -195,7 +184,7 @@ header {
 
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
 /* About Section */
@@ -203,7 +192,7 @@ header {
     padding: 50px;
     background-color: #e0f2f1;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .about img {
@@ -217,36 +206,11 @@ header {
     transform: scale(1.05);
 }
 
-/* my-details Section */
-.my-details {
-    padding: 20px;
-    background-color: #ffffff;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.my-details h2 {
-    margin-bottom: 20px;
-    font-size: 2.5rem;
-    color: #009688;
-    font-weight: bold;
-    animation: slideIn 1s ease-out;
-}
-
-.my-details h1 {
-    margin-bottom: 20px;
-    font-size: 1rem;
-    color: #009688;
-    font-weight: bold;
-    animation: slideIn 1s ease-out;
-}
-
 /* Contact Section */
 .contact {
     padding: 50px;
     background-color: #ffffff;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .contact form {
@@ -288,110 +252,16 @@ header {
 .submit-button:hover {
     background: #00796b;
     transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
-
-/* New Contact and Social Media Section */
-.contact-section {
-    text-align: center;
-    margin: 20px;
-    background-color: transparent; /* No background color */
-}
-
-.save-contact-btn {
-    background-color: #4CAF50; /* Button background */
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-}
-
-.save-contact-btn:hover {
-    background-color: #45a049;
-}
-
-.social-media-icons {
-    margin-top: 20px;
-    background-color: transparent; /* No background color */
-}
-
-.social-media-icons a {
-    margin: 0 10px;
-    display: inline-block;
-}
-
-.social-media-icons img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-    background-color: transparent; /* No background color */
-}
-
-.social-media-icons img:hover {
-    transform: scale(1.1); /* Hover effect */
-}
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    max-width: 300px; /* Limit the width of the box */
-    text-align: center;
-}
-
-/* The Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 
 /* Footer */
 footer {
-    background-color: #004d40;
-    color: #ffffff;
-    padding: 20px 0;
+    background: #004d40;
+    padding: 20px;
     text-align: center;
-    margin-top: 40px;
-}
-
-footer a {
     color: #ffffff;
-    text-decoration: none;
-    padding: 5px 10px;
-}
-
-footer a:hover {
-    text-decoration: underline;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.2);
 }
 
 .scroll-to-top {
@@ -420,67 +290,66 @@ footer a:hover {
 }
 
 /* Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 @keyframes fadeInUp {
-    from {
+    0% {
         opacity: 0;
         transform: translateY(50px);
     }
-    to {
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
 }
 
-/* Media Queries */
+.visible {
+    opacity: 1;
+}
+
 @media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Stack logo and nav links vertically */
-    }
-
-    .nav-links {
-        justify-content: center; /* Center the nav-links horizontally */
-    }
-
-    .hero {
-        padding: 100px 0;
-    }
-
     .service-cards {
-        flex-direction: column; /* Stack service cards vertically */
+        flex-direction: column;
+        align-items: center;
     }
 
     .card {
-        width: 100%; /* Make each card take full width */
-        margin-bottom: 20px; /* Add spacing between cards */
-    }
-}
-
-@media (max-width: 480px) {
-    .cta-button {
-        padding: 10px 20px;
-        font-size: 1rem; /* Adjust button size for small screens */
-    }
-
-    .submit-button {
-        padding: 10px 20px;
-        font-size: 1rem; /* Adjust submit button size */
-    }
-
-    .nav-links {
-        flex-direction: column; /* Stack links vertically */
-        align-items: center; /* Center the stacked links */
-    }
-
-    .nav-links li {
-        margin: 10px 0; /* Add margin for spacing */
+        width: 80%;
+        margin-bottom: 20px;
     }
 }
