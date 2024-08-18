@@ -91,43 +91,11 @@
     </div>
   </section>
 
-<section id="contact" class="contact fade-in">
-    <h2>צור קשר - נשמח לשוחח!</h2>
-    <form id="contact-form">
-      <input type="text" name="name" placeholder="שם מלא" required>
-      <input type="email" name="email" placeholder="אימייל" required>
-      <textarea name="message" placeholder="הודעה" required></textarea>
-      <button type="submit" class="submit-button">שלח הודעה</button>
-    </form>
-    <div id="form-status"></div>
-</section>
-
-<script>
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevents default form submission behavior
-    var form = event.target;
-    var formData = new FormData(form);
-
-    fetch('https://formspree.io/f/xdkndrlr', {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'Accept': 'application/json'
-        }
-    }).then(function(response) {
-        if (response.ok) {
-            document.getElementById('form-status').innerHTML = 'Your message has been sent successfully!';
-            form.reset(); // Clear the form
-        } else {
-            document.getElementById('form-status').innerHTML = 'Oops! There was a problem sending your message.';
-        }
-    }).catch(function(error) {
-        document.getElementById('form-status').innerHTML = 'Oops! There was a problem sending your message.';
-    });
-});
-</script>
-
-
+<form id="contactForm" action="https://formspree.io/f/xdkndrlr" method="POST">
+    <!-- Your form fields -->
+    <input type="text" name="phone" placeholder="Enter your phone number" required>
+    <button type="submit" class="submit-button">Submit</button>
+</form>
 
   <footer>
     <div class="footer-content">
