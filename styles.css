@@ -443,3 +443,31 @@ footer a:hover {
         margin: 10px 0; /* Add margin for spacing */
     }
 }
+#popup-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+}
+
+#popup-message p {
+    margin: 0 0 10px;
+}
+
+#popup-message button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#popup-message button:hover {
+    background-color: #45a049;
+}
