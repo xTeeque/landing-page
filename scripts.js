@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Reveal elements on scroll
-    const revealElements = document.querySelectorAll('.fade-in');
+    // Reveal elements on scroll with fade-in and slide-in effects
+    const revealElements = document.querySelectorAll('.fade-in, .slide-in');
 
     const revealOnScroll = () => {
         const windowHeight = window.innerHeight;
@@ -40,50 +40,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', revealOnScroll);
     revealOnScroll(); // Initial check
-});
-document.querySelectorAll('input[name="contact-method"]').forEach(function(elem) {
-    elem.addEventListener('change', function(event) {
-        if (event.target.value === 'email') {
-            document.getElementById('email-input').style.display = 'block';
-            document.getElementById('phone-input').style.display = 'none';
-            document.getElementById('phone-input').removeAttribute('required');
-            document.getElementById('email-input').setAttribute('required', 'required');
-        } else {
-            document.getElementById('phone-input').style.display = 'block';
-            document.getElementById('email-input').style.display = 'none';
-            document.getElementById('email-input').removeAttribute('required');
-            document.getElementById('phone-input').setAttribute('required', 'required');
-        }
-    });
-});
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevents default form submission behavior
-    var form = event.target;
-    var formData = new FormData(form);
 
-    fetch('https://formspree.io/f/xdkndrlr', {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'Accept': 'application/json'
-        }
-    }).then(function(response) {
-        if (response.ok) {
-            showPopup('ההודעה שלך נשלחה בהצלחה!');
-            form.reset(); // Clear the form
-        } else {
-            showPopup('אופס! הייתה בעיה בשליחת ההודעה שלך.');
-        }
-    }).catch(function(error) {
-        showPopup('אופס! הייתה בעיה בשליחת ההודעה שלך.');
-    });
+    // Hero background image fade-in effect
+    const heroBgImage = document.querySelector('.hero-bg-image');
+    if (heroBgImage) {
+        setTimeout(() => {
+            heroBgImage.classList.add('visible');
+        }, 500); // Delay before fade-in
+    }
 });
-
-function showPopup(message) {
-    document.getElementById('popup-text').innerText = message;
-    document.getElementById('popup-message').style.display = 'block';
-}
-
-function closePopup() {
-    document.getElementById('popup-message').style.display = 'none';
-}
