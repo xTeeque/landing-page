@@ -1,49 +1,6 @@
 // script.js
 
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('contactForm');
-    const modal = document.getElementById('popupModal');
-    const closeBtn = document.querySelector('.close');
-
-    form.addEventListener('submit', (e) => {
-        e.preventDefault(); // Prevent the default form submission
-        
-        const formData = new FormData(form);
-
-        fetch(form.action, {
-            method: form.method,
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        }).then(response => {
-            if (response.ok) {
-                modal.style.display = 'block'; // Show the pop-up modal
-                form.reset(); // Optionally reset the form
-            } else {
-                alert("Oops! There was a problem with your submission. Please try again."); // Error message
-            }
-        }).catch(error => {
-            alert("Oops! There was an error submitting the form. Please try again later."); // Catch any network errors
-        });
-    });
-
-    // Close the modal when the close button is clicked
-    closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
-
-    // Close the modal when the user clicks outside of it
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
-});
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
     const scrollToTopButton = document.querySelector('.scroll-to-top');
     
     // Smooth Scrolling for internal links and buttons
