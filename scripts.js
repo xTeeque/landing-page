@@ -1,6 +1,35 @@
 // script.js
 
 document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contactForm');
+
+    // Handle form submission
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent default form submission
+
+        // Send form data using Fetch API to Formspree
+        fetch(form.action, {
+            method: form.method,
+            body: new FormData(form),
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                // Show a browser alert pop-up on successful submission
+                alert('Your form has been submitted successfully!');
+                // Optionally, reset the form fields
+                form.reset();
+            } else {
+                alert('Oops! There was a problem submitting your form.');
+            }
+        }).catch(error => {
+            alert('Oops! There was a problem submitting your form.');
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
     const scrollToTopButton = document.querySelector('.scroll-to-top');
     
     // Smooth Scrolling for internal links and buttons
