@@ -213,7 +213,7 @@ header {
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 1vh;
   display: flex;
   align-items: center;
   justify-content: center;
