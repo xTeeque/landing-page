@@ -7,17 +7,22 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault(); // Prevent the default form submission
         
         const formData = new FormData(form);
+
         fetch(form.action, {
             method: form.method,
             body: formData,
-            headers: { 'Accept': 'application/json' }
+            headers: {
+                'Accept': 'application/json'
+            }
         }).then(response => {
             if (response.ok) {
                 alert("Thank you! Your message was successfully sent."); // Pop-up message
-                form.reset();
+                form.reset(); // Optionally reset the form
             } else {
                 alert("Oops! There was a problem with your submission. Please try again."); // Error message
             }
+        }).catch(error => {
+            alert("Oops! There was an error submitting the form. Please try again later."); // Catch any network errors
         });
     });
 });
