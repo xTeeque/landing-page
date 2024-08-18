@@ -22,9 +22,7 @@
     </ul>
 </header>
 
-
-
-  <section class="hero">
+<section class="hero">
     <div class="hero-content fade-in">
       <h1>TechFix - שירותי מחשבים עם צבע!</h1>
       <p>החבר הכי טוב של המחשב שלך נמצא במרחק קליק!</p>
@@ -32,9 +30,9 @@
     </div>
     <div class="hero-bg-image fade-in">
       </div>
-  </section>
+</section>
 
-  <section id="services" class="services fade-in">
+<section id="services" class="services fade-in">
     <h2>השירותים שלנו</h2>
     <div class="service-cards">
       <div class="card">
@@ -58,15 +56,15 @@
         <p>שחזור נתונים בצורה מקצועית!</p>
       </div>
     </div>
-  </section>
+</section>
 
-  <section id="about" class="about fade-in">
+<section id="about" class="about fade-in">
     <img src="images/team.png" alt="צוות טכנאים מקצועי">
     <h2>אודותינו - מקצועיות עם גישה</h2>
     <p>אנחנו לא רק טכנאים, אנחנו טכנאים מקצועיים עם גישה ייחודית לכל בעיה טכנולוגית.</p>
-  </section>
+</section>
 
-  <section id="my-details" class="my-details fade-in">
+<section id="my-details" class="my-details fade-in">
     <h2>הפרטים שלי</h2>
     <div class="contact-section">
       <h1>שמרו אותי באנשי הקשר</h1>
@@ -89,16 +87,13 @@
         </a>
       </div>
     </div>
-  </section>
+</section>
 
 <section id="contact" class="contact fade-in">
     <h2>צור קשר - נשמח לשוחח!</h2>
     <form id="contact-form">
       <input type="text" name="name" placeholder="שם מלא" required>
-      
-      <!-- Phone number input -->
       <input type="tel" name="phone" placeholder="מספר טלפון" required>
-
       <textarea name="message" placeholder="הודעה" required></textarea>
       <button type="submit" class="submit-button">שלח הודעה</button>
     </form>
@@ -110,17 +105,50 @@
     </div>
 </section>
 
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevents default form submission behavior
+    var form = event.target;
+    var formData = new FormData(form);
 
-  <footer>
+    fetch('https://formspree.io/f/xdkndrlr', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(function(response) {
+        if (response.ok) {
+            showPopup('ההודעה שלך נשלחה בהצלחה!');
+            form.reset(); // Clear the form
+        } else {
+            showPopup('אופס! הייתה בעיה בשליחת ההודעה שלך.');
+        }
+    }).catch(function(error) {
+        showPopup('אופס! הייתה בעיה בשליחת ההודעה שלך.');
+    });
+});
+
+function showPopup(message) {
+    document.getElementById('popup-text').innerText = message;
+    document.getElementById('popup-message').style.display = 'block';
+}
+
+function closePopup() {
+    document.getElementById('popup-message').style.display = 'none';
+}
+</script>
+
+<footer>
     <div class="footer-content">
       <p>&copy; 2024 אסף. כל הזכויות שמורות.</p>
       <a href="#" id="scrollToTopBtn" class="scroll-to-top">
         <img src="images/scroll-to-top.png" alt="חזור למעלה">
       </a>
     </div>
-  </footer>
+</footer>
 
-  <script>
+<script>
     window.onscroll = function() {
       var scrollTopButton = document.getElementById("scrollToTopBtn");
       if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -133,6 +161,6 @@
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-  </script>
+</script>
 </body>
 </html>
