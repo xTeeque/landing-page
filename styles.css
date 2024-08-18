@@ -400,7 +400,7 @@ footer {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: #00796b;
+    background: #fffff;
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
@@ -412,7 +412,7 @@ footer {
 
 .scroll-to-top:hover {
     transform: scale(1.2);
-    background: #004d40;
+    background: #fffff;
 }
 
 /* Animations */
