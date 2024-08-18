@@ -1,8 +1,10 @@
 // script.js
 
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('.contact form');
-    
+    const form = document.getElementById('contactForm');
+    const modal = document.getElementById('popupModal');
+    const closeBtn = document.querySelector('.close');
+
     form.addEventListener('submit', (e) => {
         e.preventDefault(); // Prevent the default form submission
         
@@ -16,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }).then(response => {
             if (response.ok) {
-                alert("Thank you! Your message was successfully sent."); // Pop-up message
+                modal.style.display = 'block'; // Show the pop-up modal
                 form.reset(); // Optionally reset the form
             } else {
                 alert("Oops! There was a problem with your submission. Please try again."); // Error message
@@ -25,7 +27,20 @@ document.addEventListener('DOMContentLoaded', () => {
             alert("Oops! There was an error submitting the form. Please try again later."); // Catch any network errors
         });
     });
+
+    // Close the modal when the close button is clicked
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Close the modal when the user clicks outside of it
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
 });
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
