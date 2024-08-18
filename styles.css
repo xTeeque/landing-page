@@ -333,6 +333,74 @@ header {
 .social-media-icons img:hover {
     transform: scale(1.1); /* Hover effect */
 }
+/* Form Styles */
+.contact {
+    padding: 50px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: auto; /* Center the form horizontally */
+    border-radius: 15px;
+    background: linear-gradient(135deg, #009688, #00796b); /* Gradient background */
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: auto;
+}
+
+.contact input,
+.contact textarea {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #004d40;
+    background-color: #e0f2f1;
+    color: #333;
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 150, 136, 0.7);
+    transform: scale(1.02);
+}
+
+.contact label {
+    text-align: left;
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.submit-button {
+    background: #ff5722;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #e64a19;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: bold;
+}
 
 /* Footer */
 footer {
