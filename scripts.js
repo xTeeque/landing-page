@@ -16,7 +16,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Scroll to Top Button
+    // Scroll to Top Button Visibility
+    const toggleScrollToTopButton = () => {
+        if (window.scrollY > 300) {
+            scrollToTopButton.classList.add('show');
+        } else {
+            scrollToTopButton.classList.remove('show');
+        }
+    };
+
+    window.addEventListener('scroll', toggleScrollToTopButton);
+    toggleScrollToTopButton(); // Initial check
+
+    // Scroll to Top Button Action
     scrollToTopButton.addEventListener('click', () => {
         window.scrollTo({
             top: 0,
@@ -24,8 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Reveal elements on scroll with fade-in and slide-in effects
-    const revealElements = document.querySelectorAll('.fade-in, .slide-in');
+    // Reveal elements on scroll
+    const revealElements = document.querySelectorAll('.fade-in');
 
     const revealOnScroll = () => {
         const windowHeight = window.innerHeight;
@@ -40,12 +52,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', revealOnScroll);
     revealOnScroll(); // Initial check
-
-    // Hero background image fade-in effect
-    const heroBgImage = document.querySelector('.hero-bg-image');
-    if (heroBgImage) {
-        setTimeout(() => {
-            heroBgImage.classList.add('visible');
-        }, 500); // Delay before fade-in
-    }
 });
