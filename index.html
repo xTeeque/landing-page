@@ -91,7 +91,7 @@
     </div>
   </section>
 
-<form action="https://formspree.io/f/xdkndrlr" method="POST">
+<form id="contactForm" action="https://formspree.io/f/xdkndrlr" method="POST">
     <label for="fullName">Full Name:</label>
     <input type="text" id="fullName" name="name" required>
     
@@ -100,6 +100,15 @@
 
     <button type="submit">Submit</button>
 </form>
+
+<!-- Pop-up Modal -->
+<div id="popupModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Thank you! Your message was successfully sent.</p>
+    </div>
+</div>
+
 
 
   <footer>
