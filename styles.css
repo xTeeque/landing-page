@@ -398,7 +398,7 @@ header {
 }
 
 .about img {
-    max-width: 8%;
+    max-width: 100px;
     border-radius: 6px;
     margin-bottom: 20px;
     transition: transform 0.3s ease;
