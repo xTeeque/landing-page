@@ -57,6 +57,7 @@ header {
 }
 
 .nav-links li {
+	flex-shrink: 0;
     margin-left: 20px;
 }
 
@@ -67,8 +68,6 @@ header {
     border-radius: 50px;
     background: #004d40;
     transition: background 0.3s ease, transform 0.3s ease;
-	display: block;
-	text-align: center;
 }
 
 .nav-links a:hover {
