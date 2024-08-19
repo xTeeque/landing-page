@@ -78,7 +78,7 @@ header {
 .hero {
     background: #009688;
     color: #ffffff;
-    padding: 200px 0;
+    padding: 20px 0;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -99,7 +99,7 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('https://images7.alphacoders.com/546/546187.jpg'); /* Add your background image here */
+    background-image: url('background-img.jpg'); /* Add your background image here */
     background-size: cover;
     background-position: center;
     opacity: 0;
