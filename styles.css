@@ -75,10 +75,10 @@ header {
     transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 	.nav-links a {
-		padding: 15px;
-		font-size: 18px;
+		padding: 10px;
+		font-size: 14px;
 	}
 }
 
