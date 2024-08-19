@@ -528,6 +528,7 @@ footer {
     border-radius: 50%;
     background: #fffff;
     transition: transform 0.3s ease, background 0.3s ease;
+	z-index: 1; /* Ensures button appears above other elements */
 }
 
 .scroll-to-top img {
