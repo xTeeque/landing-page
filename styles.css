@@ -77,8 +77,8 @@ header {
 
 @media (max-width: 600px) {
 	.nav-links a {
-		padding: 10px;
-		font-size: 14px;
+		padding: 15px;
+		font-size: 18px;
 	}
 }
 
