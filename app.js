@@ -26,13 +26,13 @@ var swiper = new Swiper(".mySwiper", {
 /* form script */
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
-			event.preventDefault(); // Prevent the default form submission
-			const form = event.target;
+	event.preventDefault(); // Prevent the default form submission
+	const form = event.target;
 			
-			fetch(form.action, {
-				method: 'POST',
-				body: new FormData(form),
-				headers: {
+	fetch(form.action, {
+		method: 'POST',
+		body: new FormData(form),
+		headers: {
 					'Accept': 'application/json'
 				}
 			}).then(response => {
@@ -45,4 +45,4 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 			}).catch(error => {
 				alert('אירעה שגיאה, נסה שוב מאוחר יותר.');
 			});
-		});
+});
