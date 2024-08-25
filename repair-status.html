@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="שירותי מחשבים מקצועיים ומהירים עם גישה ייחודית ואמינה.">
+    <title>אסף - שירותי מחשוב</title>
+    <link rel="icon" href="files/technician.png" type="image/png">
+    
+    <!--SwiperJS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--font awesome(for icons)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    
+    <!-- icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--css file-->
+    <link rel="stylesheet" href="repair-status-style.css" />
+  
+  </head>
+  <body>
+    <!--head of the file-->
+    <header>
+      <nav>
+        <div class="logo"><a href="index.html">אסף - שירותי מחשוב</a></div>
+        <ul class="nav-links">
+          <li><a href="index.html#services">שירותים</a></li>
+          <li><a href="index.html#wrapper">המלצות</a></li>
+          <li><a href="index.html#my-details">צור קשר</a></li>
+          <li><a href="index.html#about">אודות</a></li>
+          <li><a href="repair-status.html">סטטוס תיקון</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Repair Status Section -->
+	<section class="repair-status">
+		<h2>בדוק את סטטוס התיקון שלך</h2>
+		<input type="text" id="search-input" placeholder="הזן מספר תיקון או מספר טלפון נייד">
+		<button id="check-status">בדוק סטטוס</button>
+		<div id="status-display"></div>
+	</section>
+
+
+
+    <!--my details section-->
+    <section id="my-details" class="my-details fade-in">
+      <h2>צרו קשר</h2>
+      <div class="contact-section">
+        <h1>שמרו אותי באנשי הקשר</h1>
+        <a href="files/contact.vcf" download="אסף - שירותי מחשוב">
+          <button class="save-contact-btn">לחצו כאן לשמירה</button>
+        </a>
+        <div class="social-media-icons">
+          <a href="https://www.facebook.com/asafarusi1?mibextid=LQQJ4d" target="_blank">
+            <img src="files/fb.png" alt="Facebook">
+          </a>
+          <a href="https://wa.me/972533395180" target="_blank">
+            <img src="files/ws.png" alt="Whatsapp">
+          </a>
+        </div>
+        <a href="#contact" class="message-us-btn">השאירו הודעה</a>
+      </div>
+    </section>
+
+    <!--contact form section-->
+    <section id="contact" class="contact fade-in">
+      <h2>השאירו הודעה - נחזור בהקדם!</h2>
+      <form id="contact-form" action="https://formspree.io/f/xdkndrlr" method="POST">
+        <input type="text" name="name" placeholder="שמך" required />
+        <input type="email" name="email" placeholder="אימייל שלך" required />
+        <textarea name="message" placeholder="הודעה שלך" required></textarea>
+        <button type="submit" class="submit-button">שלח הודעה</button>
+      </form>
+    </section>
+
+    <!--bottom of the page-->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2024 אסף - שירותי מחשוב. כל הזכויות שמורות.</p>
+        <a href="#" class="scroll-to-top">
+          <img src="files/scroll_to_top.png" alt="Scroll to Top">
+        </a>
+      </div>
+    </footer>
+    
+    <!--scripts used-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="repair-status-script.js"></script>
+
+    <script src="https://cdn.enable.co.il/licenses/enable-L293068uck2px7bl-0824-62547/init.js"></script>
+  </body>
+</html>
