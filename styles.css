@@ -49,9 +49,11 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
-    margin: 0;
+    padding: 10px;
+    margin: 10px;
     flex-direction: row;
+	display: flex;
+    flex-wrap: wrap;
 }
 
 .nav-links li {
@@ -73,7 +75,7 @@ header {
     transform: scale(1.1);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 	.nav-links a {
 		padding: 10px;
 		font-size: 14px;
