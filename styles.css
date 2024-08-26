@@ -44,42 +44,29 @@ header {
     color: #004d40;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* nav Section */
+
+/* Add a black background color to the top navigation */
+.topnav {
+	background-color: transparent;
     padding: 10px;
-    margin: 10px;
-    flex-direction: row;
-	display: flex;
-    flex-wrap: wrap;
 }
 
-.nav-links li {
-	flex-shrink: 0;
-    margin-left: 20px;
-}
-
-.nav-links a {
-    color: #ffffff;
+/* Style the links inside the navigation bar */
+.topnav a {
+	color: white;
+    padding: 10px 15px;
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 50px;
-    background: #004d40;
-    transition: background 0.3s ease, transform 0.3s ease;
+    border: 2px solid #f0f0f0; /* Light gray or another contrasting color */
+    border-radius: 5px;
+    display: inline-block;
+    margin: 0 5px;
 }
 
-.nav-links a:hover {
-    background: #00796b;
-    transform: scale(1.1);
-}
-
-@media (max-width: 768px) {
-	.nav-links a {
-		padding: 10px;
-		font-size: 14px;
-	}
+/* Change the color of links on hover */
+.topnav a:hover {
+	background-color: #f0f0f0; /* Light gray or another accent color */
+    color: #30a7a7; /* Original teal */
 }
 
 /* Hero Section */
