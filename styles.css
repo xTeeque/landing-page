@@ -46,16 +46,11 @@ header {
 
 /* nav Section */
 
-/* Add a black background color to the top navigation */
 .topnav {
 	background-color: transparent;
-	padding: 10px;
-	max-width: 600px;
-	z-index: 1000; /* Ensure it’s above other content */
-	position: relative; /* Needed to apply z-index */
-	margin: 5px;
-	justify-content: center;
-	flex-wrap: wrap;
+    padding: 10px;
+    text-align: center;
+    display: block; /* Ensure it’s visible */
 }
 
 /* Style the links inside the navigation bar */
@@ -63,7 +58,7 @@ header {
 	color: white;
     padding: 10px 15px;
     text-decoration: none;
-    border: 2px solid #f0f0f0; /* Light gray or another contrasting color */
+    border: 2px solid #f0f0f0;
     border-radius: 5px;
     display: inline-block;
     margin: 5px;
@@ -71,8 +66,8 @@ header {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-	background-color: #f0f0f0; /* Light gray or another accent color */
-	color: #30a7a7; /* Original teal */
+	background-color: #f0f0f0;
+    color: #30a7a7;
 }
 
 /* Hero Section */
