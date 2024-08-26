@@ -3,7 +3,7 @@ document.getElementById("check-status").addEventListener("click", function() {
     const statusDisplay = document.getElementById("status-display");
 
     if (searchInput === "") {
-        statusDisplay.textContent = "אנא הזן מספר תיקון או מספר טלפון נייד.";
+        statusDisplay.textContent = "הזינו מספר תיקון או טלפון";
         statusDisplay.style.color = "red";
         return;
     }
@@ -23,16 +23,22 @@ document.getElementById("check-status").addEventListener("click", function() {
         .then(data => {
             if (data.length > 0) {
                 const status = data[0].status; // Assumes your Google Sheets column is named "status"
-                statusDisplay.textContent = `הסטטוס הנוכחי הוא: ${status}`;
+                statusDisplay.textContent = `הסטטוס הנוכחי: ${status}`;
                 statusDisplay.style.color = "green";
+				statusDisplay.style.fontSize = "1.5em"; // Adjust the font size as needed
+				statusDisplay.style.marginTop = "20px"; // Adjust the margin to move it down
             } else {
                 statusDisplay.textContent = "לא נמצאו נתונים תואמים.";
                 statusDisplay.style.color = "red";
+				statusDisplay.style.fontSize = "1.5em"; // Adjust the font size as needed
+				statusDisplay.style.marginTop = "20px"; // Adjust the margin to move it down
             }
         })
         .catch(error => {
             statusDisplay.textContent = "שגיאה בחיבור לשרת. נסה שוב מאוחר יותר.";
             statusDisplay.style.color = "red";
+			statusDisplay.style.fontSize = "1.5em"; // Adjust the font size as needed
+			statusDisplay.style.marginTop = "20px"; // Adjust the margin to move it down
             console.error('Error:', error);
         });
 });
