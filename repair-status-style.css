@@ -44,42 +44,31 @@ header {
     color: #004d40;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* nav Section */
+
+/* Add a black background color to the top navigation */
+.topnav {
+	background-color: transparent;
     padding: 10px;
-    margin: 10px;
-    flex-direction: row;
-	display: flex;
-    flex-wrap: wrap;
+    text-align: center;
+    display: block; /* Ensure it’s visible */
 }
 
-.nav-links li {
-	flex-shrink: 0;
-    margin-left: 20px;
-}
-
-.nav-links a {
-    color: #ffffff;
+/* Style the links inside the navigation bar */
+.topnav a {
+	color: white;
+    padding: 10px 15px;
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 50px;
-    background: #004d40;
-    transition: background 0.3s ease, transform 0.3s ease;
+    border: 2px solid #f0f0f0;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px;
 }
 
-.nav-links a:hover {
-    background: #00796b;
-    transform: scale(1.1);
-}
-
-@media (max-width: 768px) {
-	.nav-links a {
-		padding: 10px;
-		font-size: 14px;
-	}
+/* Change the color of links on hover */
+.topnav a:hover {
+	background-color: #f0f0f0;
+    color: #30a7a7;
 }
 
 /* Hero Section */
@@ -118,7 +107,6 @@ header {
     transform: scale(1.1);
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
-
 
 /* Repair Status Section (Modified About Section) */
 .repair-status {
@@ -160,8 +148,6 @@ header {
     outline: none;
     box-shadow: 0 0 5px rgba(0, 150, 136, 0.5);
 }
-
-
 
 .status-check-form {
     margin: 20px 0;
@@ -222,8 +208,6 @@ header {
         max-width: 100%;
     }
 }
-
-
 
 /* my-details Section */
 .my-details {
