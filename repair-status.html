@@ -34,12 +34,20 @@
 		</div>
       </nav>
     </header>
+	
+	<!--titles-->
+		<section class="hero">
+			<div class="hero-content fade-in">
+			<h1>לשיחת ייעוץ בחינם לחצו על הכפתור מטה</h1>
+			<a href="tel:053-339-5180" class="cta-button">לחצו כאן לחיוג</a>
+			</div>
+		</section>
 
     <!-- Repair Status Section -->
 	<section class="repair-status">
-		<h2>בדוק את סטטוס התיקון שלך</h2>
-		<input type="text" id="search-input" placeholder="הזן מספר תיקון או מספר טלפון נייד">
-		<button id="check-status">בדוק סטטוס</button>
+		<h2>בדקו את סטטוס התיקון שלכם</h2>
+		<input type="text" id="search-input" placeholder="הזינו מספר תיקון או טלפון">
+		<button id="check-status">בדיקת סטטוס</button>
 		<div id="status-display"></div>
 	</section>
 
@@ -69,9 +77,9 @@
     <section id="contact" class="contact fade-in">
       <h2>השאירו הודעה - נחזור בהקדם!</h2>
       <form id="contact-form" action="https://formspree.io/f/xdkndrlr" method="POST">
-        <input type="text" name="name" placeholder="שמך" required />
-        <input type="email" name="email" placeholder="אימייל שלך" required />
-        <textarea name="message" placeholder="הודעה שלך" required></textarea>
+				<input type="text" name="name" placeholder="שם מלא" required>
+				<input type="email" name="email" placeholder="אימייל" required>
+				<textarea name="message" placeholder="מה תרצו לכתוב לי" required></textarea>
         <button type="submit" class="submit-button">שלח הודעה</button>
       </form>
     </section>
