@@ -1,0 +1,497 @@
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* General Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    direction: rtl;
+}
+
+/* Header and Navigation */
+header {
+    background: #009688;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.logo a {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #004d40;
+}
+
+/* nav Section */
+
+/* Add a black background color to the top navigation */
+.topnav {
+	background-color: transparent;
+    padding: 10px;
+    text-align: center;
+    display: block; /* Ensure it’s visible */
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+	color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: 2px solid #f0f0f0;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+	background-color: #f0f0f0;
+    color: #30a7a7;
+}
+
+/* Hero Section */
+.hero {
+    background: #009688;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    animation: fadeIn 2s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-button {
+    background: #ff5722;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 50px;
+	line-height: 80px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background: #e64a19;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Repair Status Section (Modified About Section) */
+.repair-status {
+    padding: 50px;
+    background-color: #e0f2f1;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.repair-status h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #009688;
+    font-weight: bold;
+    animation: slideIn 1s ease-out;
+}
+
+.repair-status p {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 20px 0;
+    line-height: 1.8;
+}
+
+.repair-status input,
+.repair-status textarea {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #009688;
+    background-color: #e0f2f1;
+    color: #333;
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.repair-status input:focus,
+.repair-status textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 150, 136, 0.5);
+}
+
+.status-check-form {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.repair-id {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #009688;
+    background-color: #e0f2f1;
+    color: #333;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
+    transition: box-shadow 0.3s ease;
+}
+
+.repair-id:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 150, 136, 0.5);
+}
+
+#check-status {
+    background: #009688;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#check-status:hover {
+    background: #00796b;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.status-display {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    status-check-form {
+        flex-direction: column;
+    }
+
+    repair-id,
+    check-status {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* my-details Section */
+.my-details {
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.my-details h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #009688;
+    font-weight: bold;
+    animation: slideIn 1s ease-out;
+}
+
+.my-details h1 {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #009688;
+    font-weight: bold;
+    animation: slideIn 1s ease-out;
+}
+
+/* New Contact and Social Media Section */
+
+.contact-section {
+    text-align: center;
+    margin: 20px;
+    background-color: transparent;
+}
+
+.save-contact-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.save-contact-btn:hover {
+    background-color: #45a049;
+}
+
+.social-media-icons {
+    margin-top: 20px;
+    background-color: transparent;
+}
+
+.social-media-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-media-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    background-color: transparent;
+}
+
+.social-media-icons img:hover {
+    transform: scale(1.1);
+}
+
+.message-us-btn {
+    background: #4CAF50;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 50px;
+	line-height: 80px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.message-us-btn:hover {
+	background-color: #45a049;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact input,
+.contact textarea {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #009688;
+    background-color: #e0f2f1;
+    color: #333;
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 150, 136, 0.5);
+}
+
+.submit-button {
+    background: #009688;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #00796b;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact input,
+.contact textarea {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #009688;
+    background-color: #e0f2f1;
+    color: #333;
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 150, 136, 0.5);
+}
+
+.submit-button {
+    background: #009688;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #00796b;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Footer */
+footer {
+    background: #00796b;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.2);
+}
+
+/* Scroll To Top */
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fffff;
+    transition: transform 0.3s ease, background 0.3s ease;
+	z-index: 1; /* Ensures button appears above other elements */
+}
+
+.scroll-to-top img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.scroll-to-top:hover {
+    transform: scale(1.2);
+    background: #fffff;
+}
+
+/* Animations */
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+.visible {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
