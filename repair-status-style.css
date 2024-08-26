@@ -52,6 +52,7 @@ header {
     padding: 10px;
     text-align: center;
     display: block; /* Ensure it’s visible */
+	font-weight: bold;
 }
 
 /* Style the links inside the navigation bar */
