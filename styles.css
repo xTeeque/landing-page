@@ -50,8 +50,12 @@ header {
 .topnav {
 	background-color: transparent;
 	padding: 10px;
+	max-width: 600px;
 	z-index: 1000; /* Ensure it’s above other content */
 	position: relative; /* Needed to apply z-index */
+	margin: 5px;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 /* Style the links inside the navigation bar */
@@ -62,7 +66,7 @@ header {
     border: 2px solid #f0f0f0; /* Light gray or another contrasting color */
     border-radius: 5px;
     display: inline-block;
-    margin: 0 5px;
+    margin: 5px;
 }
 
 /* Change the color of links on hover */
