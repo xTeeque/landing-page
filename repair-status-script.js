@@ -22,8 +22,9 @@ document.getElementById("check-status").addEventListener("click", function() {
         })
         .then(data => {
             if (data.length > 0) {
+                const firstName = data[0].first_name; // Assumes your Google Sheets column is named "first_name"
                 const status = data[0].status; // Assumes your Google Sheets column is named "status"
-                statusDisplay.textContent = `הסטטוס הנוכחי: ${status}`;
+                statusDisplay.textContent = `היי ${firstName}, מצב התיקון הוא: ${status}`;
                 statusDisplay.style.color = "green";
 				statusDisplay.style.fontSize = "1.5em"; // Adjust the font size as needed
 				statusDisplay.style.marginTop = "20px"; // Adjust the margin to move it down
