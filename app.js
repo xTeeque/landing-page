@@ -46,3 +46,14 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 				alert('אירעה שגיאה, נסה שוב מאוחר יותר.');
 			});
 });
+
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+
+document.onkeydown = function(e) {
+    if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+        alert("Developer tools are disabled.");
+        return false;
+    }
+};
