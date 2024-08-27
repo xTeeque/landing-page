@@ -43,3 +43,14 @@ document.getElementById("check-status").addEventListener("click", function() {
             console.error('Error:', error);
         });
 });
+
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+
+document.onkeydown = function(e) {
+    if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+        alert("Developer tools are disabled.");
+        return false;
+    }
+};
